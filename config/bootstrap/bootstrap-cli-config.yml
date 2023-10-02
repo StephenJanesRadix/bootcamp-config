@@ -68,6 +68,18 @@ bootstrap:
                 idp-source-id: 1a9e32ac-3461-4b16-afbf-786fa1dc47c5 # for the AAD Group to be matched to cdf-group
                 idp-source-name: bootcamp-15-test-all-read # i.e. bootcamp-01-test-all-read
 
+        - cdf-project: cdf-bootcamp-15-prod # i.e. bootcamp-01-test
+          mappings:
+              - cdf-group: cdf:root
+                idp-source-id: d12bceb6-f218-475b-b90c-99547e26f2e7
+                idp-source-name: bootcamp-15-prod-admin
+              - cdf-group: cdf:all:owner
+                idp-source-id: c2e317f4-b556-4b31-a5e2-d31be4275b22 # for the AAD Group to be matched to cdf-group
+                idp-source-name: bootcamp-15-prod-all-owner # i.e. bootcamp-01-test-all-owner
+              - cdf-group: cdf:all:read
+                idp-source-id: 2adfad55-f074-43d5-80de-33e9afefcf63 # for the AAD Group to be matched to cdf-group
+                idp-source-name: bootcamp-15-prod-all-read # i.e. bootcamp-01-test-all-read
+
     namespaces:
         # Typical config will have a namespace for data sources ("src") and a namespace for use cases ("uc")
         - ns-name: src
@@ -75,7 +87,7 @@ bootstrap:
 
           # Node names will normally follow src:001:srcname or uc:001:usecasename naming convention
           ns-nodes:
-              - node-name: scr:001:sap
+              - node-name: src:001:sap
                 description: Data from SAP # HINT
               - node-name: src:002:opcua
                 description: Data from OPC UA # HINT
