@@ -1,0 +1,1 @@
+Creating virtualenv enablement-bootcamp-config-pj_-i0mO-py3.10 in /home/user/.cache/pypoetry/virtualenvs
